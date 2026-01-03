@@ -31,7 +31,7 @@ export function MonthlyBarChart({ data }: MonthlyBarChartProps) {
           <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
           <XAxis dataKey="monthName" fontSize={12} />
           <YAxis fontSize={12} tickFormatter={(value) => `$${value}`} />
-          <Tooltip formatter={(value: number) => [`$${value.toFixed(2)}`, 'Amount']} />
+          <Tooltip formatter={(value) => [`$${Number(value).toFixed(2)}`, 'Amount']} />
           <Bar dataKey="amount" fill="#6366f1" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>

@@ -37,7 +37,7 @@ export function ExpenseTrendChart({ data }: ExpenseTrendChartProps) {
           <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
           <XAxis dataKey="date" fontSize={12} />
           <YAxis fontSize={12} tickFormatter={(value) => `$${value}`} />
-          <Tooltip formatter={(value: number) => [`$${value.toFixed(2)}`, 'Amount']} />
+          <Tooltip formatter={(value) => [`$${Number(value).toFixed(2)}`, 'Amount']} />
           <Line
             type="monotone"
             dataKey="amount"

@@ -41,7 +41,7 @@ export function CategoryPieChart({ data }: CategoryPieChartProps) {
             ))}
           </Pie>
           <Tooltip
-            formatter={(value: number) => [`$${value.toFixed(2)}`, 'Amount']}
+            formatter={(value) => [`$${Number(value).toFixed(2)}`, 'Amount']}
           />
           <Legend />
         </PieChart>
